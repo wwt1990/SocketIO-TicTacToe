@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <h1>Tic - Tac - Toe</h1>
+        <h3>How to Play</h3>
+        <ul>
+          <li>Player 1: Enter your username and click on 'CREATE GAME'</li>
+          <li>Player 2: Enter your username, room id and click on 'JOIN GAME'</li>
+        </ul>
+        <h4>Create a New Game</h4>
+        <input type="text" name="name" id="nameNew" placeholder="Enter your name" required>
+        <button id="newBtn">Create Game</button>
+        <br><br>
+        <h4>Join an Existing Game</h4>
+        <input type="text" name="name" id="nameJoin" placeholder="Enter your name" required>
+        <input type="text" name="room" id="room" placeholder="Enter game id" required>
+        <button id="joinBtn">Join Game</button>
+      </div>
+      <div class="gameBoard" style="display:none">
+        <p id="userHello"></p>
+        <h3 id="turn"></h3>
+        <table class="center">
+          <tr>
+            <td><button class="tile" id="button_00"></button></td>
+            <td><button class="tile" id="button_01"></button></td>
+            <td><button class="tile" id="button_02"></button></td>
+          </tr>
+          <tr>
+            <td><button class="tile" id="button_10"></button></td>
+            <td><button class="tile" id="button_11"></button></td>
+            <td><button class="tile" id="button_12"></button></td>
+          </tr>
+          <tr>
+            <td><button class="tile" id="button_20"></button></td>
+            <td><button class="tile" id="button_21"></button></td>
+            <td><button class="tile" id="button_22"></button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
